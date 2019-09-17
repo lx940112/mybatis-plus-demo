@@ -30,8 +30,8 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-#      url: jdbc:mysql://10.1.3.28:3306/renren_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
-      url: jdbc:mysql://10.1.3.28:3306/cloud_demo1?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      url: jdbc:mysql://10.1.3.28:3306/renren_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#      url: jdbc:mysql://10.1.3.28:3306/cloud_demo1?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: root
       password: root
       initial-size: 10
