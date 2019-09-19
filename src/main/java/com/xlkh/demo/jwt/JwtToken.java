@@ -7,9 +7,14 @@ import org.apache.shiro.authc.AuthenticationToken;
  */
 public class JwtToken implements AuthenticationToken {
     private String token;
+    private Object principal;
 
     public JwtToken(String token) {
         this.token = token;
+    }
+
+    public JwtToken(Object principal) {
+        this.principal = principal;
     }
 
     @Override

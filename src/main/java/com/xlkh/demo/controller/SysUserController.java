@@ -4,6 +4,7 @@ import com.xlkh.demo.dao.SysDeptDao;
 import com.xlkh.demo.dto.SysUserDTO;
 import com.xlkh.demo.entity.SysDept;
 import com.xlkh.demo.service.SysUserService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,7 @@ public class SysUserController {
     private SysUserService sysUserService;
 
     @GetMapping("/test1")
+    @RequiresPermissions({"123"})
     public Map<String, Object> test1(){
         Map<String, Object> map = new HashMap<>(3);
         SysUserDTO sysUserDTO = sysUserService.get(1171268378076758018L);
@@ -37,6 +39,7 @@ public class SysUserController {
 
 
     @GetMapping("/test2")
+    @RequiresPermissions({"321"})
     public Map<String, Object> test2(){
         Map<String, Object> map = new HashMap<>(3);
         LocalDateTime curDate = sysDeptDao.getCurDate();

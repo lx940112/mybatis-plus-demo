@@ -50,3 +50,9 @@ spring:
       filter.stat.log-slow-sql: true
       filter.stat.slow-sql-millis: 1000
       filter.stat.merge-sql: false
+  redis:
+    host: 10.0.30.12
+    port: 6379
+    password:
+    timeout: 5000ms
+
